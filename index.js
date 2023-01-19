@@ -12,6 +12,10 @@ const api_secret =
   "cuqw73ydem24sswd8jgavd4skzmkary3zdcmnzeeqj8detymvw9vhafu94kngfkz";
 const serverClient = StreamChat.getInstance(api_key, api_secret);
 
+app.get("/", (req,res)=>{
+  res.send("Aysnc Tic Tac Toe")
+})
+
 app.post("/signup", async (req, res) => {
   try {
     const { firstName, lastName, username, password } = req.body;
